@@ -27,7 +27,8 @@ public class DownloadController extends Constant {
 
 		response.setContentType(CONTENT_TYPE);
 		response.addHeader(CONTENT_DEPOSITION, ATTACHMENT);
-		try (ICsvBeanWriter csvBeanWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.EXCEL_PREFERENCE)) {
+		try  {
+			ICsvBeanWriter csvBeanWriter = new CsvBeanWriter(response.getWriter(), CsvPreference.EXCEL_PREFERENCE);
 			ApiCaller apiCaller = new ApiCaller();
 			List<Employee> employers = apiCaller.getEmployee();
 			csvBeanWriter.writeHeader(CSV_HEADER);
