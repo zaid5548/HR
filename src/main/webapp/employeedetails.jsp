@@ -100,7 +100,7 @@ header {
 					<th>Location</th>
 					<th>Email</th>
 					<th>Date Of Birth</th>
-					<th>Test Header</th>
+					
 					<th>Action</th>
 				</tr>
 
